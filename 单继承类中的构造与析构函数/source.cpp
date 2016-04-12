@@ -2,8 +2,9 @@
 using std::cout;
 
 class A{
-	int a;
+	
 public:
+	int a;
 	A():a(8){
 		cout<<a;
 	}
@@ -19,9 +20,10 @@ class B:A{
 	const int d;
 	A x,y,z;
 public:
-	B(int v):b(v),y(b+2),x(b+1),d(b),A(v){//初始化的时候不是按照这里排列的顺序，而是根据优先级来决定的
-		c=v;		                      //（同一优先级的按照声明的顺序来进行初始化）
-		cout<<b<<c<<d;					  //这里显式初始化z,z按照缺省无参声明
+	A::a;
+	B(int v):b(v),y(b+2),x(b+1),d(b),A(v){
+		c=v;
+		cout<<b<<c<<d<<++A::a<<B::a;
 		cout<<"C";
 	}
 	~B(){
