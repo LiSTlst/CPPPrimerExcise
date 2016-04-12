@@ -67,16 +67,16 @@ int  getelem(const STACK *const p, int x){
 }
 STACK *const push(STACK *const p, int e){
         if((p->pos+1)<=(p->max)){
-        	++p->pos;
+            ++p->pos;
             p->elems[(p->pos)-1]=e;
             return p;
         }else{
-        	std::cout<<"This stack is fulled aready."<<std::endl;
+            std::cout<<"This stack is fulled aready."<<std::endl;
         }
         return p;
 }
 STACK *const pop(STACK *const p, int &e){
-		e=p->elems[(p->pos)-1];
+        e=p->elems[(p->pos)-1];
         p->pos--;
         return p;
 }
