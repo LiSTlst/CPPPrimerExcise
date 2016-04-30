@@ -1,5 +1,5 @@
 /**
-*这份文件是对c++五次上机的整合
+*
 */
 #include <iostream>
 #include <vector>
@@ -35,57 +35,61 @@ int main(void){
 			switch (stage1)
 			{
 			case 1:
-				cout << "您已经进入ＰＯＳＴＫ程序" << endl;
-				cout << "请输入您想要运行的操作" << endl;
-				cout << "1：初始化栈			2：压栈" << endl;
-				cout << "3：使用栈初始化栈	4：输出容量" << endl;
-				cout << "5：输出元素个数		6：输出特定位置元素值" << endl;
-				cout << "7:pop				8:用栈赋值" << endl;
-				cout << "9：打印				10：销毁" << endl;
+				cout << "----------您已经进入ＰＯＳＴＫ程序--------" << endl;
+				cout << "-----------请输入您想要运行的操作---------" << endl;
+				cout << "1：初始化栈           2：压栈" << endl;
+				cout << "3：使用栈初始化栈     4：输出容量" << endl;
+				cout << "5：输出元素个数       6：输出特定位置元素值" << endl;
+				cout << "7：pop               8：用栈赋值" << endl;
+				cout << "9：打印              10：销毁" << endl;
 				cout << "0：退出" << endl;
 				while (flag2){
 					if (cin >> stage2) {
 						POSTK a, b;
-						POSTK &aOrb=a;//之所以不把aOrb定义为一个POSTK类型是因为在下面对aOrb进行赋值的时候不能用一个未经初始化的类直接赋值给这个类，但是使用引用可以
-						char name;
+						//之所以不把aOrb定义为一个POSTK类型是因为在下面对aOrb进行赋值的时候不能用一个未经初始化的类直接赋值给这个类，但是使用引用可以(注意：引用一旦被初始化就不能再被赋值)
+						char chosed;
 						int e = 0;
 						int costumeDefineSize;
 						switch (stage2)
 						{
 						case 1:
 							cout << "现在有两个栈可以被初始化，您要您要进行初始化的栈a还是b" << endl;
-							cin >> name;
-							if (name == 'a') {
-								cout << "好" << endl;
-								aOrb = a;
-								cout << "你选择了a" << endl;
-							}
-							else if(name == 'b'){
-								cout << "好" << endl;
-								aOrb = b;
-								cout << "你选择了b" << endl;
+							if(cin >> chosed){
+								switch (chosed)
+								{
+								case 'a':
+									if(cin>>costumeDefineSize){
+										initPOSTK(a, costumeDefineSize);
+										cout << "操作成功生成了POSTK类型的变量" << chosed <<"，容量为"<<costumeDefineSize<< endl;
+									}
+									else{
+										cout << "请按照说明输入" << endl;
+									}
+									break;
+								case 'b':
+									if (cin >> costumeDefineSize) {
+										initPOSTK(b, costumeDefineSize);
+										cout << "操作成功生成了POSTK类型的变量" << chosed << "，容量为" << costumeDefineSize << endl;
+									}
+								default:
+									break;
+								}
 							}
 							else {
 								cout << "请按照说明输入（因为没有按照说明操做，所以这里默认定义为初始化a）" << endl;
 							}
 							cout << "请输入初始化栈的长度" << endl;
-							if(cin>>costumeDefineSize){
-								initPOSTK(&aOrb, costumeDefineSize);
-								cout << "操作成功生成了POSTK类型的变量" << name <<"，容量为" <<costumeDefineSize<< endl;
-							}
-							else{
-								cout << "请按照说明输入" << endl;
-							}
+
 							break;
 						case 2:
 							cout << "您要对哪一个栈进行压栈" << endl;
-							cin >> name;
-							if (name == 'a') {
+							cin >> chosed;
+							if (chosed == 'a') {
 								cout << "好" << endl;
 								aOrb = a;
 								cout << "你选择了a" << endl;
 							}
-							else if (name == 'b') {
+							else if (chosed == 'b') {
 								cout << "好" << endl;
 								aOrb = b;
 								cout << "你选择了b" << endl;
@@ -154,6 +158,7 @@ int main(void){
 				flag1 = 0;
 				break;
 			default:
+				cout << "请按照指示操作" << endl;
 				break;
 			}
 		}

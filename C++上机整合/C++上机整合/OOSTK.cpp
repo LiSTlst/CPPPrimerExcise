@@ -3,24 +3,35 @@
 
 using namespace std;
 
+//初始化栈：最多m个元素
 OOSTK::OOSTK(int m) :elems(new int[m]), max(m) {
 	pos = 0;
 }
+
+//用栈s拷贝初始化栈
 OOSTK::OOSTK(const OOSTK&s) : elems(new int[s.max]), max(s.max) {
 	for (int i = 0; i<s.pos; i++) {
 		this->elems[i] = s.elems[i];
 	}
 	this->pos = s.pos;
 }
+
+//返回栈的最大元素个数max
 int OOSTK::size() const {
 	return max;
 }
+
+//返回栈的实际元素个数pos
 int OOSTK::howMany() const {
 	return pos;
 }
+
+//取下标x处的栈元素
 int OOSTK::getelem(int x)const {
 	return this->elems[x];
 }
+
+//将e入栈，并返回当前栈
 OOSTK& OOSTK::push(int e) {
 	if (pos + 1>max) {
 		cout << "This stack is full already." << endl;
@@ -31,6 +42,8 @@ OOSTK& OOSTK::push(int e) {
 	}
 	return *this;
 }
+
+//出栈到e，并返回当前栈
 OOSTK& OOSTK::pop(int &e) {
 	if (pos>0) {
 		e = elems[pos - 1];
@@ -41,6 +54,8 @@ OOSTK& OOSTK::pop(int &e) {
 	}
 	return *this;
 }
+
+//赋s给栈，并返回被赋值的当前栈
 OOSTK& OOSTK::assign(const OOSTK&s) {
 	int *pmax = const_cast<int*>(&this->max);
 	*pmax = s.max;
@@ -53,11 +68,15 @@ OOSTK& OOSTK::assign(const OOSTK&s) {
 	}
 	return *this;
 }
+
+//打印栈
 void OOSTK::print() const {
 	for (int i = 0; i<pos; i++) {
 		cout << elems[i] + '\n';
 	}
 }
+
+//销毁栈
 OOSTK::~OOSTK() {
 	pos = 0;
 	cout << "pos=0" << endl;

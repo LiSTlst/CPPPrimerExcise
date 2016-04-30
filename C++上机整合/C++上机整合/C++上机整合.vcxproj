@@ -148,6 +148,8 @@
   <ItemGroup>
     <ClCompile Include="OOSTK.cpp" />
     <ClCompile Include="POSTK.cpp" />
+    <ClCompile Include="QUE2S.cpp" />
+    <ClCompile Include="QUEIS.cpp" />
     <ClCompile Include="STACK.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

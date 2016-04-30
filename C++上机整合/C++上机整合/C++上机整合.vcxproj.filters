@@ -27,6 +27,12 @@
     <ClCompile Include="POSTK.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="QUE2S.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QUEIS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="POSTK_H.h">

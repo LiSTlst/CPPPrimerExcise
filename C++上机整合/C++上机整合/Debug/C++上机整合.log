@@ -1,2 +1,2 @@
 ﻿  main.cpp
-  C++上机整合.vcxproj -> C:\CPPPrimerExcise\C++上机整合\Debug\C++上机整合.exe
+c:\cppprimerexcise\c++上机整合\c++上机整合\main.cpp(66): error C4700: 使用了未初始化的局部变量“b”
