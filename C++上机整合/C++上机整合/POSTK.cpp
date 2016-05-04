@@ -50,19 +50,29 @@ POSTK *const push(POSTK *const p, int e) {
 
 //出栈到e，并返回p值
 POSTK *const pop(POSTK *const p, int &e) {
-	e = p->elems[(p->pos) - 1];
-	p->pos--;
+	if ((p->pos) >= 1) {
+		e = p->elems[(p->pos) - 1];
+		p->pos--;
+	}
+	else {
+		cout << "This stack is empty" << endl;
+	}
 	return p;
 }
 
 //赋s给p指的栈，返p值
 POSTK *const assign(POSTK*const p, const POSTK&s) {
-	free(p->elems);
-	p->pos = s.pos;
-	p->elems = (int*)malloc(s.max * sizeof(int));
-	p->pos = s.pos;
-	for (int i = 0; i<s.pos; i++) {
-		p->elems[i] = s.elems[i];
+	if (p != &s) {
+		free(p->elems);
+		p->pos = s.pos;
+		p->elems = (int*)malloc(s.max * sizeof(int));
+		p->pos = s.pos;
+		for (int i = 0; i < s.pos; i++) {
+			p->elems[i] = s.elems[i];
+		}
+	}
+	else {
+		cout << "you can not assign a stack by itself" << endl;
 	}
 	return p;
 }

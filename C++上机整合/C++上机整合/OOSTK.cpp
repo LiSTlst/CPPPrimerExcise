@@ -72,17 +72,16 @@ OOSTK& OOSTK::assign(const OOSTK&s) {
 //¥Ú”°’ª
 void OOSTK::print() const {
 	for (int i = 0; i<pos; i++) {
-		cout << elems[i] + '\n';
+		cout << elems[i] << endl;
 	}
 }
 
 //œ˙ªŸ’ª
 OOSTK::~OOSTK() {
-	pos = 0;
-	cout << "pos=0" << endl;
 	if (elems) {
 		delete elems;
-		*(int**)(&elems) = 0;
+		pos = 0;
+		*(int *)(&max) = 0;
 		cout << "delete elems" << endl;
 	}
 }

@@ -83,7 +83,9 @@ void STACK::print() const {
 
 //Ïú»ÙÕ»
 STACK::~STACK() {
-	delete(elems);
-	pos = 0;
-	*(int *)(&max) = 0;
+	if (elems) {
+		delete(elems);
+		pos = 0;
+		*(int *)(&max) = 0;
+	}
 }
