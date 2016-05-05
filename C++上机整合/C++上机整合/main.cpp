@@ -10,48 +10,47 @@ using std::cin;
 using std::endl;
 
 int main(void) {
+	bool flag1=1, flag2=1;						//用于判断是否退出当前阶段的表单
+	int stage1, stage2;							//用于选择进入哪一个程序和操作
+	int costumeDefineSize = 0;					//用户输入costumedefinesize来决定栈和队列的容量
+	int e_num = 0;								//用户通过e_num来进行栈和队列的输入和输出
+	char chosed0, chosed;						//用于用户对栈和队列进行选择
 
-	int stage1;
-	int stage2;
-	bool flag1=1, flag2=1;
-	int e_num = 0;
-	char chosed0, chosed;
-	int costumeDefineSize = 0;
-	POSTK a, b, c;
-	POSTK* aborc0 = NULL, *aborc = NULL;
-	OOSTK *d = NULL, *e = NULL, *f = NULL;
-	OOSTK *deorf0 = NULL, *deorf = NULL;
-	int dflag = 0, eflag = 0, fflag = 0;
-	STACK *g=NULL, *h=NULL, *i=NULL;
-	STACK *ghori0 = NULL, *ghori = NULL;
-	int gflag = 0, hflag = 0, iflag = 0;
-	QUE2S *j = NULL, *k = NULL, *l = NULL;
-	QUE2S *jkorl = NULL, *jkorl0 = NULL;
-	int jflag = 0, kflag = 0, lflag = 0;
-	QUEIS *m = NULL, *n = NULL, *o = NULL;
-	QUEIS *mnoro = NULL, *mnoro0 = NULL;
-	int mflag = 0, nflag = 0, oflag = 0;
+	POSTK a, b, c;								//三个函数式栈
+	POSTK* aborc0 = NULL, *aborc = NULL;		//指代三个栈中由用户选择的某一个栈的指针
+	OOSTK *d = NULL, *e = NULL, *f = NULL;		//三个面向对象的栈的指针
+	OOSTK *deorf0 = NULL, *deorf = NULL;		//指代三个栈中由用户选择的某一个栈的指针
+	int dflag = 0, eflag = 0, fflag = 0;		//判断栈是否已经被初始化
+	STACK *g=NULL, *h=NULL, *i=NULL;			//三个面向对象的栈的指针（重定义了操作符）
+	STACK *ghori0 = NULL, *ghori = NULL;		//指代三个栈中有用户选择的某一个栈的指针
+	int gflag = 0, hflag = 0, iflag = 0;		//判断栈是否已经被初始化
+	QUE2S *j = NULL, *k = NULL, *l = NULL;		//三个由两个栈构成的队列的指针
+	QUE2S *jkorl = NULL, *jkorl0 = NULL;		//指代三个队列中由用户选择的某一个队列的指针
+	int jflag = 0, kflag = 0, lflag = 0;		//判断队列是够已经被初始化
+	QUEIS *m = NULL, *n = NULL, *o = NULL;		//三个继承栈的队列
+	QUEIS *mnoro = NULL, *mnoro0 = NULL;		//指代三个队列中有用户选择的某一个队列的指针
+	int mflag = 0, nflag = 0, oflag = 0;		//判断队列是否已经被初始化
 
 	while (flag1) {
 		cout << "请选择要进入的程序" << endl;
-		cout << "1:POSTK" << endl;
-		cout << "2:OOSTK" << endl;
-		cout << "3:STACK" << endl;
-		cout << "4:QUE2S" << endl;
-		cout << "5:QUEIS" << endl;
-		cout << "0:退出主程序" << endl;
+		cout << "1:POSTK" << '\n'
+			<< "2:OOSTK" << '\n'
+			<< "3:STACK" << '\n'
+			<< "4:QUE2S" << '\n'
+			<< "5:QUEIS" << '\n'
+			<< "0:退出主程序" << endl;
 		if (cin >> stage1) {
 			switch (stage1)
 			{
 			case 1:
-				cout << "----------您已经进入ＰＯＳＴＫ程序--------" << endl;
-				cout << "-----------请输入您想要运行的操作---------" << endl;
-				cout << "1：初始化栈           2：使用栈初始化栈" << endl;
-				cout << "3：输出容量           4：输出元素个数" << endl;
-				cout << "5：输出特定位置元素值  6：压栈" << endl;
-				cout << "7：弹出               8：用栈赋值" << endl;
-				cout << "9：打印              10：销毁" << endl;
-				cout << "0：退出" << endl;
+				cout << "----------您已经进入ＰＯＳＴＫ程序--------" << '\n'
+					<< "-----------请输入您想要运行的操作---------" << '\n'
+					<< "1：初始化栈           2：使用栈初始化栈" << '\n'
+					<< "3：输出容量           4：输出元素个数" << '\n'
+					<< "5：输出特定位置元素值  6：压栈" << '\n'
+					<< "7：弹出               8：用栈赋值" << '\n'
+					<< "9：打印               10：销毁" << '\n'
+					<< "0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -88,12 +87,12 @@ int main(void) {
 								break;
 							}
 							initPOSTK(aborc, costumeDefineSize);
-							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 2:
-							cout << "您可以使用abc中已经初始化的栈来初始化别的栈" << endl;
-							cout << "请选择要用哪一个栈作为初始化模板" << endl;
+							cout << "您可以使用abc中已经初始化的栈来初始化别的栈" << '\n'
+								<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
 									aborc0 = &a;
@@ -102,7 +101,7 @@ int main(void) {
 										if (chosed0 == 'b') {
 											aborc = &b;
 										}
-										else if (chosed0 = 'c') {
+										else if (chosed0 == 'c') {
 											aborc = &c;
 										}
 										else
@@ -124,7 +123,7 @@ int main(void) {
 										if (chosed0 == 'a') {
 											aborc = &b;
 										}
-										else if (chosed0 = 'c') {
+										else if (chosed0 == 'c') {
 											aborc = &c;
 										}
 										else
@@ -146,7 +145,7 @@ int main(void) {
 										if (chosed0 == 'a') {
 											aborc = &b;
 										}
-										else if (chosed0 = 'b') {
+										else if (chosed0 == 'b') {
 											aborc = &c;
 										}
 										else
@@ -172,8 +171,8 @@ int main(void) {
 								break;
 							}
 							initPOSTK(aborc, *aborc0);
-							cout << "用" << chosed << "初始化了" << chosed0 << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "用" << chosed << "初始化了" << chosed0 << '\n'
+							<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 3:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -198,8 +197,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的容量是" << size(aborc) << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的容量是" << size(aborc) << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -224,8 +223,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的元素个数是" << howMany(aborc) << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的元素个数是" << howMany(aborc) << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 5:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -292,8 +291,8 @@ int main(void) {
 								break;
 							}
 							push(aborc, e_num);
-							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
 							cout << "请选择要弹出的栈" << endl;
@@ -319,12 +318,12 @@ int main(void) {
 								break;
 							}
 							pop(aborc, e_num);
-							cout << "操作成功，弹出a的最后一位元素" << e_num << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，弹出a的最后一位元素" << e_num << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 8:
-							cout << "您可以使用abc中已经初始化的栈来给别的栈赋值" << endl;
-							cout << "请选择要用哪一个栈作为赋值模板" << endl;
+							cout << "您可以使用abc中已经初始化的栈来给别的栈赋值" << '\n'
+								<< "请选择要用哪一个栈作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
 									aborc0 = &a;
@@ -333,7 +332,7 @@ int main(void) {
 										if (chosed0 == 'b') {
 											aborc = &b;
 										}
-										else if (chosed0 = 'c') {
+										else if (chosed0 == 'c') {
 											aborc = &c;
 										}
 										else
@@ -355,7 +354,7 @@ int main(void) {
 										if (chosed == 'a') {
 											aborc = &b;
 										}
-										else if (chosed = 'c') {
+										else if (chosed == 'c') {
 											aborc = &c;
 										}
 										else
@@ -377,7 +376,7 @@ int main(void) {
 										if (chosed == 'a') {
 											aborc = &b;
 										}
-										else if (chosed = 'b') {
+										else if (chosed == 'b') {
 											aborc = &c;
 										}
 										else
@@ -426,8 +425,8 @@ int main(void) {
 								break;
 							}
 							print(aborc);
-							cout << "操作成功，打印出" << chosed << "中所有的元素" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 10:
 							cout << "请选择要销毁的栈" << endl;
@@ -453,8 +452,8 @@ int main(void) {
 								break;
 							}
 							destroyPOSTK(aborc);
-							cout << "操作成功，销毁栈" << chosed << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，销毁栈" << chosed << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 0:
 							flag2 = 0;
@@ -472,14 +471,14 @@ int main(void) {
 				}
 				break;
 			case 2:
-				cout << "----------您已经进入OOSTK程序--------" << endl;
-				cout << "-----------请输入您想要运行的操作---------" << endl;
-				cout << "1：初始化栈           2：使用栈初始化栈" << endl;
-				cout << "3：输出容量		      4：输出元素个数" << endl;
-				cout << "5：输出特定位置元素值  6：压栈" << endl;
-				cout << "7：弹出               8：用栈赋值" << endl;
-				cout << "9：打印              10：销毁" << endl;
-				cout << "0：退出" << endl;
+				cout << "----------您已经进入OOSTK程序--------" << '\n'
+					<< "-----------请输入您想要运行的操作---------" << '\n'
+					<< "1：初始化栈           2：使用栈初始化栈" << '\n'
+					<< "3：输出容量		     4：输出元素个数" << '\n'
+					<< "5：输出特定位置元素值  6：压栈" << '\n'
+					<< "7：弹出               8：用栈赋值" << '\n'
+					<< "9：打印              10：销毁" << '\n'
+					<< "0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -536,12 +535,12 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 2:
-							cout << "您可以使用def中已经初始化的栈来初始化别的栈" << endl;
-							cout << "请选择要用哪一个栈作为初始化模板" << endl;
+							cout << "您可以使用def中已经初始化的栈来初始化别的栈" << '\n'
+							<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'd') {
 									if (dflag) {
@@ -651,8 +650,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "用" << chosed << "初始化了" << chosed0 << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "用" << chosed << "初始化了" << chosed0 << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 3:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -698,8 +697,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的容量是" << (*deorf).size() << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的容量是" << (*deorf).size() << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -745,8 +744,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的元素个数是" << (*deorf).howMany() << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的元素个数是" << (*deorf).howMany() << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 5:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -855,8 +854,8 @@ int main(void) {
 								break;
 							}
 							(*deorf).push(e_num);
-							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
 							cout << "请选择要弹出的栈" << endl;
@@ -903,12 +902,12 @@ int main(void) {
 								break;
 							}
 							(*deorf).pop(e_num);
-							cout << "操作成功，弹出a的最后一位元素" << e_num << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，弹出a的最后一位元素" << e_num << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 8:
-							cout << "您可以使用abc中已经初始化的栈来给别的栈赋值" << endl;
-							cout << "请选择要用哪一个栈作为赋值模板" << endl;
+							cout << "您可以使用d、e、f中已经初始化的栈来给别的栈赋值" << '\n'
+							<< "请选择要用哪一个栈作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'd') {
 									if (dflag) {
@@ -931,7 +930,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed0 = 'f') {
+										else if (chosed0 == 'f') {
 											if (fflag) {
 												deorf = f;
 											}
@@ -974,7 +973,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'f') {
+										else if (chosed == 'f') {
 											if (fflag) {
 												deorf = f;
 											}
@@ -1017,7 +1016,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'e') {
+										else if (chosed == 'e') {
 											if (eflag) {
 												deorf = e;
 											}
@@ -1094,8 +1093,8 @@ int main(void) {
 								break;
 							}
 							(*deorf).print();
-							cout << "操作成功，打印出" << chosed << "中所有的元素" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 10:
 							cout << "请选择要销毁已经初始化的栈" << endl;
@@ -1145,8 +1144,8 @@ int main(void) {
 								break;
 							}
 							(*deorf).~OOSTK();
-							cout << "操作成功，销毁栈" << chosed << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，销毁栈" << chosed << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 0:
 							flag2 = 0;
@@ -1164,14 +1163,14 @@ int main(void) {
 				}
 				break;
 			case 3:
-				cout << "----------您已经进入STACK程序--------" << endl;
-				cout << "-----------请输入您想要运行的操作---------" << endl;
-				cout << "1：初始化栈           2：使用栈初始化栈" << endl;
-				cout << "3：输出容量		      4：输出元素个数" << endl;
-				cout << "5：输出特定位置元素值  6：压栈" << endl;
-				cout << "7：弹出               8：用栈赋值" << endl;
-				cout << "9：打印              10：销毁" << endl;
-				cout << "0：退出" << endl;
+				cout << "----------您已经进入STACK程序--------" << '\n'
+					<< "-----------请输入您想要运行的操作---------" << '\n'
+					<< "1：初始化栈           2：使用栈初始化栈" << '\n'
+					<< "3：输出容量		      4：输出元素个数" << '\n'
+					<< "5：输出特定位置元素值  6：压栈" << '\n'
+					<< "7：弹出               8：用栈赋值" << '\n'
+					<< "9：打印              10：销毁" << '\n'
+					<< "0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -1206,7 +1205,7 @@ int main(void) {
 										break;
 									}
 								}
-								else if (chosed == 'f') {
+								else if (chosed == 'i') {
 									cout << "请输入" << chosed << "的容量" << endl;
 									if (cin >> costumeDefineSize) {
 										i = new STACK(costumeDefineSize);
@@ -1228,12 +1227,12 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 2:
-							cout << "您可以使用def中已经初始化的栈来初始化别的栈" << endl;
-							cout << "请选择要用哪一个栈作为初始化模板" << endl;
+							cout << "您可以使用g、h、i中已经初始化的栈来初始化别的栈" << '\n'
+								<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'g') {
 									if (gflag) {
@@ -1343,8 +1342,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "用" << chosed << "初始化了" << chosed0 << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "用" << chosed << "初始化了" << chosed0 << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 3:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -1390,8 +1389,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的容量是" << (*ghori).size() << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的容量是" << (*ghori).size() << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -1437,8 +1436,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的元素个数是" << (int)(*ghori) << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的元素个数是" << (int)(*ghori) << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 5:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -1547,8 +1546,8 @@ int main(void) {
 								break;
 							}
 							(*ghori)<<e_num;
-							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，将" << e_num << "压入栈" << chosed << "中" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
 							cout << "请选择要弹出的栈" << endl;
@@ -1595,12 +1594,12 @@ int main(void) {
 								break;
 							}
 							(*ghori)>>e_num;
-							cout << "操作成功，弹出a的最后一位元素" << e_num << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，弹出a的最后一位元素" << e_num << '\n'
+							<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 8:
-							cout << "您可以使用abc中已经初始化的栈来给别的栈赋值" << endl;
-							cout << "请选择要用哪一个栈作为赋值模板" << endl;
+							cout << "您可以使用g、h、i中已经初始化的栈来给别的栈赋值" << '\n'
+								<< "请选择要用哪一个栈作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'g') {
 									if (gflag) {
@@ -1623,7 +1622,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed0 = 'i') {
+										else if (chosed0 == 'i') {
 											if (iflag) {
 												ghori = i;
 											}
@@ -1666,7 +1665,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'i') {
+										else if (chosed == 'i') {
 											if (iflag) {
 												ghori = i;
 											}
@@ -1709,7 +1708,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'h') {
+										else if (chosed == 'h') {
 											if (hflag) {
 												ghori = h;
 											}
@@ -1786,8 +1785,8 @@ int main(void) {
 								break;
 							}
 							(*ghori).print();
-							cout << "操作成功，打印出" << chosed << "中所有的元素" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 10:
 							cout << "请选择要销毁已经初始化的栈" << endl;
@@ -1837,8 +1836,8 @@ int main(void) {
 								break;
 							}
 							(*ghori).~STACK();
-							cout << "操作成功，销毁栈" << chosed << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，销毁栈" << chosed << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 0:
 							flag2 = 0;
@@ -1856,13 +1855,13 @@ int main(void) {
 				}
 				break;
 			case 4:
-				cout << "----------您已经进入QUE2S程序--------" << endl;
-				cout << "-----------请输入您想要运行的操作---------" << endl;
-				cout << "1：初始化队列           2：使用队列初始化队列" << endl;
-				cout << "3：输出元素个数         4：输出特定位置元素值" << endl;
-				cout << "5：入队列               6：出队列" << endl;
-				cout << "7：用队列赋值           8：打印" << endl;
-				cout << "9：销毁                 0：退出" << endl;
+				cout << "----------您已经进入QUE2S程序--------" << '\n'
+					<< "-----------请输入您想要运行的操作---------" << '\n'
+					<< "1：初始化队列           2：使用队列初始化队列" << '\n'
+					<< "3：输出元素个数         4：输出特定位置元素值" << '\n'
+					<< "5：入队列               6：出队列" << '\n'
+					<< "7：用队列赋值           8：打印" << '\n'
+					<< "9：销毁                 0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -1919,12 +1918,12 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 2:
-							cout << "您可以使用def中已经初始化的栈来初始化别的栈" << endl;
-							cout << "请选择要用哪一个栈作为初始化模板" << endl;
+							cout << "您可以使用j、k、l中已经初始化的栈来初始化别的栈" << '\n'
+								<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
 									if (jflag) {
@@ -2034,8 +2033,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "用" << chosed << "初始化了" << chosed0 << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "用" << chosed << "初始化了" << chosed0 << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 3:
 							cout << "请选择要查看的已经初始化了的队列" << endl;
@@ -2081,8 +2080,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的元素个数是" << (int)(*jkorl) << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的元素个数是" << (int)(*jkorl) << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -2191,8 +2190,8 @@ int main(void) {
 								break;
 							}
 							(*jkorl) << e_num;
-							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 6:
 							cout << "请选择要出的队列" << endl;
@@ -2239,12 +2238,12 @@ int main(void) {
 								break;
 							}
 							(*jkorl) >> e_num;
-							cout << "操作成功，出"<< chosed <<"的最后一位元素" << e_num << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，出" << chosed << "的最后一位元素" << e_num << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
-							cout << "您可以使用abc中已经初始化的队列来给别的队列赋值" << endl;
-							cout << "请选择要用哪一个队列作为赋值模板" << endl;
+							cout << "您可以使用j、k、l中已经初始化的队列来给别的队列赋值" << '\n'
+								<< "请选择要用哪一个队列作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
 									if (jflag) {
@@ -2267,7 +2266,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed0 = 'l') {
+										else if (chosed0 == 'l') {
 											if (lflag) {
 												jkorl = l;
 											}
@@ -2310,7 +2309,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'l') {
+										else if (chosed == 'l') {
 											if (lflag) {
 												jkorl = l;
 											}
@@ -2353,7 +2352,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'k') {
+										else if (chosed == 'k') {
 											if (kflag) {
 												jkorl = k;
 											}
@@ -2430,8 +2429,8 @@ int main(void) {
 								break;
 							}
 							(*jkorl).print();
-							cout << "操作成功，打印出" << chosed << "中所有的元素" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 9:
 							cout << "请选择要销毁已经初始化的队列" << endl;
@@ -2481,8 +2480,8 @@ int main(void) {
 								break;
 							}
 							(*jkorl).~QUE2S();
-							cout << "操作成功，销毁栈" << chosed << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，销毁栈" << chosed << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 0:
 							flag2 = 0;
@@ -2500,13 +2499,13 @@ int main(void) {
 				}
 				break;
 			case 5:
-				cout << "----------您已经进入QUEIS程序--------" << endl;
-				cout << "-----------请输入您想要运行的操作---------" << endl;
-				cout << "1：初始化队列           2：使用队列初始化队列" << endl;
-				cout << "3：输出元素个数         4：输出特定位置元素值" << endl;
-				cout << "5：入队列               6：出队列" << endl;
-				cout << "7：用队列赋值           8：打印" << endl;
-				cout << "9：销毁                 0：退出" << endl;
+				cout << "----------您已经进入QUEIS程序--------" << '\n'
+					<< "-----------请输入您想要运行的操作---------" << '\n'
+					<< "1：初始化队列           2：使用队列初始化队列" << '\n'
+					<< "3：输出元素个数         4：输出特定位置元素值" << '\n'
+					<< "5：入队列               6：出队列" << '\n'
+					<< "7：用队列赋值           8：打印" << '\n'
+					<< "9：销毁                 0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -2563,12 +2562,12 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "初始化了栈" << chosed << "容量为" << costumeDefineSize << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 2:
-							cout << "您可以使用def中已经初始化的栈来初始化别的栈" << endl;
-							cout << "请选择要用哪一个栈作为初始化模板" << endl;
+							cout << "您可以使用m、n、o中已经初始化的栈来初始化别的栈" << '\n'
+								<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
 									if (mflag) {
@@ -2678,8 +2677,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << "用" << chosed << "初始化了" << chosed0 << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "用" << chosed << "初始化了" << chosed0 << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 3:
 							cout << "请选择要查看的已经初始化了的队列" << endl;
@@ -2725,8 +2724,8 @@ int main(void) {
 								cout << "请按照说明操作，请重新选择操作" << endl;
 								break;
 							}
-							cout << chosed << "的元素个数是" << (int)(*mnoro) << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << chosed << "的元素个数是" << (int)(*mnoro) << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
 							cout << "请选择要查看的已经初始化了的栈" << endl;
@@ -2835,8 +2834,8 @@ int main(void) {
 								break;
 							}
 							(*mnoro) << e_num;
-							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 6:
 							cout << "请选择要出的队列" << endl;
@@ -2883,12 +2882,12 @@ int main(void) {
 								break;
 							}
 							(*mnoro) >> e_num;
-							cout << "操作成功，出" << chosed << "的最后一位元素" << e_num << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，出" << chosed << "的最后一位元素" << e_num << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
-							cout << "您可以使用abc中已经初始化的队列来给别的队列赋值" << endl;
-							cout << "请选择要用哪一个队列作为赋值模板" << endl;
+							cout << "您可以使用m、n、o中已经初始化的队列来给别的队列赋值" << '\n'
+								<< "请选择要用哪一个队列作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
 									if (mflag) {
@@ -2911,7 +2910,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed0 = 'o') {
+										else if (chosed0 == 'o') {
 											if (oflag) {
 												mnoro = o;
 											}
@@ -2954,7 +2953,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'o') {
+										else if (chosed == 'o') {
 											if (oflag) {
 												mnoro = o;
 											}
@@ -2997,7 +2996,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed = 'n') {
+										else if (chosed == 'n') {
 											if (nflag) {
 												mnoro = n;
 											}
@@ -3074,8 +3073,8 @@ int main(void) {
 								break;
 							}
 							(*mnoro).print();
-							cout << "操作成功，打印出" << chosed << "中所有的元素" << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 9:
 							cout << "请选择要销毁已经初始化的队列" << endl;
@@ -3125,8 +3124,8 @@ int main(void) {
 								break;
 							}
 							(*mnoro).~QUEIS();
-							cout << "操作成功，销毁栈" << chosed << endl;
-							cout << "请选择接下来要进行的操作" << endl;
+							cout << "操作成功，销毁栈" << chosed << '\n'
+								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 0:
 							flag2 = 0;

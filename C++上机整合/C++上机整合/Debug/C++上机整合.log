@@ -1,2 +1,14 @@
 ﻿  main.cpp
+  STACK.cpp
+  QUEIS.cpp
+  QUE2S.cpp
+  POSTK.cpp
+  OOSTK.cpp
+  正在运行 C/C++ 代码分析...
+  正在生成代码...
   C++上机整合.vcxproj -> C:\CPPPrimerExcise\C++上机整合\Debug\C++上机整合.exe
+c:\cppprimerexcise\c++上机整合\c++上机整合\oostk.cpp(14): warning C6386: 写入到“this->elems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。
+c:\cppprimerexcise\c++上机整合\c++上机整合\oostk.cpp(67): warning C6386: 写入到“*pelems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。
+c:\cppprimerexcise\c++上机整合\c++上机整合\postk.cpp(77): warning C6386: 写入到“p->elems”时缓冲区溢出: 可写大小为“(const unsigned int)s.max*sizeof(int)”个字节，但可能写入了“8”个字节。
+c:\cppprimerexcise\c++上机整合\c++上机整合\stack.cpp(14): warning C6386: 写入到“elems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。
+c:\cppprimerexcise\c++上机整合\c++上机整合\stack.cpp(72): warning C6386: 写入到“*pelems”时缓冲区溢出: 可写大小为“*pmax*4”个字节，但可能写入了“8”个字节。

@@ -13,10 +13,15 @@ void initPOSTK(POSTK *const p, int m) {
 //用栈s初始化p指的栈
 void initPOSTK(POSTK *const p, const POSTK&s) {
 	p->elems = (int *)malloc((s.max) * sizeof(int));
-	p->max = s.max;
-	p->pos = s.pos;
-	for (int i = 0; i<(s.pos); i++) {
-		p->elems[i] = s.elems[i];
+	if (p->elems) {
+		p->max = s.max;
+		p->pos = s.pos;
+		for (int i = 0; i < (s.pos); i++) {
+			p->elems[i] = s.elems[i];
+		}
+	}
+	else {
+		cout << "内存分配失败" << endl;
 	}
 }
 
@@ -66,9 +71,15 @@ POSTK *const assign(POSTK*const p, const POSTK&s) {
 		free(p->elems);
 		p->pos = s.pos;
 		p->elems = (int*)malloc(s.max * sizeof(int));
-		p->pos = s.pos;
-		for (int i = 0; i < s.pos; i++) {
-			p->elems[i] = s.elems[i];
+		if (p->elems) {
+			p->pos = s.pos;
+			for (int i = 0; i < s.pos; i++) {
+				p->elems[i] = s.elems[i];
+			}
+		}
+		else
+		{
+			cout << "内存分配失败" << endl;
 		}
 	}
 	else {
