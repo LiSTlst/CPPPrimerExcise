@@ -1,3 +1,8 @@
+/**
+*QUEIS_H.h
+*QUEIS程序中函数的声明
+*/
+
 #pragma once
 
 #ifndef QUEIS_H

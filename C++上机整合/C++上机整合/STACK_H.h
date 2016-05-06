@@ -1,3 +1,8 @@
+/**
+*STACK_H.h
+*STACK程序中函数的声明
+*/
+
 #pragma once
 #ifndef STACK_H
 #define STACK_H

@@ -1,3 +1,8 @@
+/**
+*OOSTK_H.h
+*OOSTK程序中函数的声明
+*/
+
 #pragma once
 #ifndef OOSTK_H
 #define OOSTK_H

@@ -1,3 +1,8 @@
+/**
+*QUEIS.cpp
+*QUEIS程序中函数的定义
+*/
+
 #include <iostream>
 #include "QUEIS_H.h"
 

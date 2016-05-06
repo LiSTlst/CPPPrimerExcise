@@ -1,3 +1,8 @@
+/**
+*POSTK.cpp
+*POSTK程序中函数的定义
+*/
+
 #include <iostream>
 #include "POSTK_H.h"
 
@@ -69,6 +74,7 @@ POSTK *const pop(POSTK *const p, int &e) {
 POSTK *const assign(POSTK*const p, const POSTK&s) {
 	if (p != &s) {
 		free(p->elems);
+		p->max = s.max;
 		p->pos = s.pos;
 		p->elems = (int*)malloc(s.max * sizeof(int));
 		if (p->elems) {

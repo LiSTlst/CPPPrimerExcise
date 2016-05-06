@@ -1,3 +1,9 @@
+/**
+*main.cpp
+*用户进入的测试页面，提供表单的选项，用户通过输入数字和操作对象名称来进行测试
+*用户可以在已经给出的几个可选择对象中进行各种操作，并进行程序之间的选择
+*/
+
 #include <iostream>
 #include "POSTK_H.h"
 #include "OOSTK_H.h"
@@ -32,6 +38,7 @@ int main(void) {
 	int mflag = 0, nflag = 0, oflag = 0;		//判断队列是否已经被初始化
 
 	while (flag1) {
+		cout << "注意：如果在进行操作之后显示英文提示请自行忽略下一行生成的操作成功的提示" << endl;
 		cout << "请选择要进入的程序" << endl;
 		cout << "1:POSTK" << '\n'
 			<< "2:OOSTK" << '\n'
@@ -318,7 +325,7 @@ int main(void) {
 								break;
 							}
 							pop(aborc, e_num);
-							cout << "操作成功，弹出a的最后一位元素" << e_num << '\n'
+							cout << "操作成功，弹出"<< chosed <<"的最后一位元素" << e_num << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 8:
@@ -2238,7 +2245,7 @@ int main(void) {
 								break;
 							}
 							(*jkorl) >> e_num;
-							cout << "操作成功，出" << chosed << "的最后一位元素" << e_num << '\n'
+							cout << "操作成功，出" << chosed << "的第一位元素" << e_num << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:
@@ -2882,7 +2889,7 @@ int main(void) {
 								break;
 							}
 							(*mnoro) >> e_num;
-							cout << "操作成功，出" << chosed << "的最后一位元素" << e_num << '\n'
+							cout << "操作成功，出" << chosed << "的第一位元素" << e_num << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 7:

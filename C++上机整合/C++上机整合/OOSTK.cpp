@@ -1,3 +1,8 @@
+/**
+*OOSTK.cpp
+*OOSTK程序中函数的定义
+*/
+
 #include <iostream>
 #include "OOSTK_H.h"
 

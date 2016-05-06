@@ -1,3 +1,8 @@
+/**
+*STACK.cpp
+*STACK程序中函数的定义
+*/
+
 #include <iostream>
 #include "STACK_H.h"
 

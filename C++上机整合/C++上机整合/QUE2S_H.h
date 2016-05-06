@@ -1,3 +1,8 @@
+/**
+*QUE2S_H.h
+*QUE2S程序中函数的声明
+*/
+
 #pragma once
 
 #ifndef QUE2S_H

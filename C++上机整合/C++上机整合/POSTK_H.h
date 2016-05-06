@@ -1,3 +1,8 @@
+/**
+*POSTK_H.h
+*POSTK程序中函数的声明
+*/
+
 #pragma once
 #ifndef POSTK_H
 #define POSTK_H

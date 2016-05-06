@@ -1,3 +1,8 @@
+/**
+*QUE2S.cpp
+*QUE2S程序中函数的定义
+*/
+
 #include <iostream>
 #include "QUE2S_H.h"
 
