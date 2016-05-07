@@ -35,12 +35,14 @@ QUE2S& QUE2S::operator<<(int e) {
 QUE2S& QUE2S::operator >> (int &e) {
 	if((int)s1>0){
 		int temp = 0;
-		for (int i = 0; i < (int)s1; i++) {
+		int s1_size = (int)s1;
+		for (int i = 0; i < s1_size; i++) {
 			s1 >> temp;
 			s2 << temp;
 		}
 		s2 >> e;
-		for (int i = 0; i < (int)s2; i++) {
+		int s2_size = (int)s2;
+		for (int i = 0; i < s2_size; i++) {
 			s2 >> temp;
 			s1 << temp;
 		}
@@ -64,4 +66,8 @@ void QUE2S::print()const {
 }
 
 //Ïú»Ù¶ÓÁÐ
-QUE2S::~QUE2S(){}
+QUE2S::~QUE2S() { 
+	std::cout << "a" <<std::endl;
+	s1.~STACK();
+	s2.~STACK();
+}

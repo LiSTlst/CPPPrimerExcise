@@ -20,6 +20,6 @@ public:
 	virtual STACK& operator >> (int &e);	//出栈到e，并返回当前栈
 	virtual STACK& operator=(const STACK&s);//赋s给当前栈并返回该栈
 	virtual void print() const;				//打印栈
-	virtual ~STACK();						//销毁栈
+	virtual ~STACK();     					//销毁栈
 };
 #endif

@@ -9,7 +9,7 @@
 using namespace std;
 
 //初始化队列：每栈最多m个元素
-QUEIS::QUEIS(int m):STACK(m),s(m){}
+QUEIS::QUEIS(int m) :STACK(m), s(m) {}
 
 //用队列q拷贝初始化队列
 QUEIS::QUEIS(const QUEIS &q):STACK(q),s(q.s){}

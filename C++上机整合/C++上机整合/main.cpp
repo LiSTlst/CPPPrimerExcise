@@ -2445,7 +2445,7 @@ int main(void) {
 								if (chosed == 'j') {
 									if (jflag) {
 										jkorl = j;
-										jkorl = 0;
+										jflag = 0;
 									}
 									else
 									{
