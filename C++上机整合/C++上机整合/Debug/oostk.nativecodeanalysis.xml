@@ -4,14 +4,14 @@
     <SFA>
       <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
       <FILENAME>oostk.cpp</FILENAME>
-      <LINE>14</LINE>
+      <LINE>19</LINE>
       <COLUMN>17</COLUMN>
     </SFA>
     <DEFECTCODE>6386</DEFECTCODE>
     <DESCRIPTION>写入到“this-&gt;elems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。</DESCRIPTION>
     <FUNCTION>OOSTK::{ctor}</FUNCTION>
     <DECORATED>??0OOSTK@@QAE@ABV0@@Z</DECORATED>
-    <FUNCLINE>12</FUNCLINE>
+    <FUNCLINE>17</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -21,25 +21,25 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>12</LINE>
+        <LINE>17</LINE>
         <COLUMN>35</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>12</LINE>
+        <LINE>17</LINE>
         <COLUMN>56</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -51,13 +51,13 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>14</LINE>
+        <LINE>19</LINE>
         <COLUMN>17</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>27</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -69,7 +69,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -81,7 +81,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>14</LINE>
+        <LINE>19</LINE>
         <COLUMN>17</COLUMN>
         <KEYEVENT>
           <ID>4</ID>
@@ -96,14 +96,14 @@
     <SFA>
       <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
       <FILENAME>oostk.cpp</FILENAME>
-      <LINE>67</LINE>
+      <LINE>72</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>6386</DEFECTCODE>
     <DESCRIPTION>写入到“*pelems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。</DESCRIPTION>
     <FUNCTION>OOSTK::assign</FUNCTION>
     <DECORATED>?assign@OOSTK@@QAEAAV1@ABV1@@Z</DECORATED>
-    <FUNCLINE>59</FUNCLINE>
+    <FUNCLINE>64</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -113,49 +113,49 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>60</LINE>
+        <LINE>65</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>61</LINE>
+        <LINE>66</LINE>
         <COLUMN>7</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>62</LINE>
+        <LINE>67</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>63</LINE>
+        <LINE>68</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>64</LINE>
+        <LINE>69</LINE>
         <COLUMN>9</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>65</LINE>
+        <LINE>70</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>71</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>71</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -167,13 +167,13 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>67</LINE>
+        <LINE>72</LINE>
         <COLUMN>15</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>71</LINE>
         <COLUMN>27</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -185,7 +185,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>71</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -197,7 +197,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>oostk.cpp</FILENAME>
-        <LINE>67</LINE>
+        <LINE>72</LINE>
         <COLUMN>15</COLUMN>
         <KEYEVENT>
           <ID>4</ID>

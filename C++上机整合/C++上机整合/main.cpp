@@ -2950,7 +2950,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'm') {
+										if (chosed0 == 'm') {
 											if (mflag) {
 												mnoro = m;
 											}
@@ -2960,7 +2960,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'o') {
+										else if (chosed0 == 'o') {
 											if (oflag) {
 												mnoro = o;
 											}
@@ -2993,7 +2993,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'm') {
+										if (chosed0 == 'm') {
 											if (mflag) {
 												mnoro = m;
 											}
@@ -3003,7 +3003,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'n') {
+										else if (chosed0 == 'n') {
 											if (nflag) {
 												mnoro = n;
 											}

@@ -88,13 +88,10 @@ void STACK::print() const {
 
 //Ïú»ÙÕ»
 STACK::~STACK() {
-	std::cout << "this is 0" << std::endl;
 	if (elems) {
-		std::cout << "This is the begin of ~" << std::endl;
 		delete(elems);
 		pos = 0;
 		*(int *)(&max) = 0;
 		*(int **)(&elems) = NULL;
-		std::cout << "This is the end of ~" << std::endl;
 	}
 }

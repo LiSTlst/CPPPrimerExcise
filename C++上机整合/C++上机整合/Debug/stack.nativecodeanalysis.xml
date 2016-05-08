@@ -4,14 +4,14 @@
     <SFA>
       <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
       <FILENAME>stack.cpp</FILENAME>
-      <LINE>14</LINE>
+      <LINE>19</LINE>
       <COLUMN>11</COLUMN>
     </SFA>
     <DEFECTCODE>6386</DEFECTCODE>
     <DESCRIPTION>写入到“elems”时缓冲区溢出: 可写大小为“s.max*4”个字节，但可能写入了“8”个字节。</DESCRIPTION>
     <FUNCTION>STACK::{ctor}</FUNCTION>
     <DECORATED>??0STACK@@QAE@ABV0@@Z</DECORATED>
-    <FUNCLINE>10</FUNCLINE>
+    <FUNCLINE>15</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -21,43 +21,43 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>10</LINE>
+        <LINE>15</LINE>
         <COLUMN>64</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>10</LINE>
+        <LINE>15</LINE>
         <COLUMN>35</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>10</LINE>
+        <LINE>15</LINE>
         <COLUMN>56</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>11</LINE>
+        <LINE>16</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>12</LINE>
+        <LINE>17</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>8</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>14</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -69,13 +69,13 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>14</LINE>
+        <LINE>19</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>21</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -87,7 +87,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>13</LINE>
+        <LINE>18</LINE>
         <COLUMN>14</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -99,7 +99,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>14</LINE>
+        <LINE>19</LINE>
         <COLUMN>11</COLUMN>
         <KEYEVENT>
           <ID>4</ID>
@@ -114,14 +114,14 @@
     <SFA>
       <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
       <FILENAME>stack.cpp</FILENAME>
-      <LINE>72</LINE>
+      <LINE>77</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>6386</DEFECTCODE>
     <DESCRIPTION>写入到“*pelems”时缓冲区溢出: 可写大小为“*pmax*4”个字节，但可能写入了“8”个字节。</DESCRIPTION>
     <FUNCTION>STACK::=</FUNCTION>
     <DECORATED>??4STACK@@UAEAAV0@ABV0@@Z</DECORATED>
-    <FUNCLINE>64</FUNCLINE>
+    <FUNCLINE>69</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -131,49 +131,49 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>65</LINE>
+        <LINE>70</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>71</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>67</LINE>
+        <LINE>72</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>68</LINE>
+        <LINE>73</LINE>
         <COLUMN>7</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>69</LINE>
+        <LINE>74</LINE>
         <COLUMN>9</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>70</LINE>
+        <LINE>75</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>71</LINE>
+        <LINE>76</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>71</LINE>
+        <LINE>76</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -185,13 +185,13 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>72</LINE>
+        <LINE>77</LINE>
         <COLUMN>15</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>71</LINE>
+        <LINE>76</LINE>
         <COLUMN>31</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -203,7 +203,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>71</LINE>
+        <LINE>76</LINE>
         <COLUMN>18</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -215,7 +215,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>stack.cpp</FILENAME>
-        <LINE>72</LINE>
+        <LINE>77</LINE>
         <COLUMN>15</COLUMN>
         <KEYEVENT>
           <ID>4</ID>

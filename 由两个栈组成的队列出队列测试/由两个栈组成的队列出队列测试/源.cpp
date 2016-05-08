@@ -227,7 +227,7 @@ class QUEIS : public  STACK {					//STACK作为构成队列的第1个栈
 public:
 	QUEIS(int m);								//初始化队列：每栈最多m个元素
 	virtual operator int() const;				//返回队列的实际元素个数
-	virtual QUEIS& operator << (int e); 			//将e入队列，并返回当前队列
+	virtual QUEIS& operator << (int e); 		//将e入队列，并返回当前队列
 	virtual QUEIS& operator >> (int &e);		//出队列到e，并返回当前队列
 	virtual void print() const;					//打印队列
 	virtual ~QUEIS();							//销毁队列
@@ -280,36 +280,36 @@ STACK::~STACK() {
 		delete(elems);
 		pos = 0;
 		*(int *)(&max) = 0;
+		*(int **)(&elems) = 0;
 	}
 }
 
-QUEIS::QUEIS(int m) :STACK(m), s(m) {
-}
+QUEIS::QUEIS(int m) :STACK(m), s(m) {}
 
 QUEIS::operator int() const {
-	/*
-	const STACK *que=this;
-	cout<<"复制成功"<<endl;
-	return (int)(*que);
-	*/
-	return (int)((STACK)(*this));
+	return (int)(STACK)(*this);
 }
 
 QUEIS& QUEIS::operator<<(int e) {
-	STACK *que = this;
-	cout << "用STACK类型的指针指向this" << endl;
-	int que_size = ((STACK)(*que)).size();
-	cout << "测试是否是这里出现了额问题" << endl;
-	cout << que_size << endl;
-	if ((int)(STACK)(*que)<que_size) {
-		cout << "进入循环体" << endl;
-		((STACK)(*que)) << e;
-		cout << (int)(*que) << endl;
+	int x, y;
+	y = (int)(*this);
+	int que_size = (*this).STACK::size();
+	if (y < que_size){
+		(*this).STACK::operator<<(e);
 	}
 	else {
-		cout << "This que is fulled already" << endl;
+		cout << "this que is fulled already" << endl;
 	}
 	cout << "入队列结束" << endl;
+	/*
+	int que_size = ((STACK)(*this)).size();
+	int i = (int)(*this);
+	if(i < que_size) {
+		(*this) << e;
+	}
+	cout << "入队列结束" << endl;
+	*/
+
 	return *this;
 }
 
@@ -342,14 +342,7 @@ QUEIS::~QUEIS() {}
 
 int main() {
 	QUEIS x(2);
-	STACK *que = &x;
-	cout << "强制转换前队列容量" << ((STACK)x).size() << endl;
-	cout << "强制转换后队列容量" << x.size() << endl;
-	cout << "STACK类型指针显示的队列容量" << (*que).size() << endl;
 	x << 1;
-	cout << "强制转换前的队列元素个数" << (int)x << endl;
-	cout << "强制转换后的队列元素个数" << (int)(STACK)x << endl;
-	cout << "STACK类型指针显示的队列元素个数" << (int)(*que) << endl;
-
+	cout<<size
 	return 0;
 }

@@ -87,6 +87,6 @@ OOSTK::~OOSTK() {
 		delete elems;
 		pos = 0;
 		*(int *)(&max) = 0;
-		cout << "delete elems" << endl;
+		*(int **)(&elems) = NULL;
 	}
 }

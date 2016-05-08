@@ -4,14 +4,14 @@
     <SFA>
       <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
       <FILENAME>postk.cpp</FILENAME>
-      <LINE>77</LINE>
+      <LINE>83</LINE>
       <COLUMN>16</COLUMN>
     </SFA>
     <DEFECTCODE>6386</DEFECTCODE>
     <DESCRIPTION>写入到“p-&gt;elems”时缓冲区溢出: 可写大小为“(const unsigned int)s.max*sizeof(int)”个字节，但可能写入了“8”个字节。</DESCRIPTION>
     <FUNCTION>assign</FUNCTION>
     <DECORATED>?assign@@YAQAUPOSTK@@QAU1@ABU1@@Z</DECORATED>
-    <FUNCLINE>69</FUNCLINE>
+    <FUNCLINE>74</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -21,7 +21,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>70</LINE>
+        <LINE>75</LINE>
         <COLUMN>7</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -33,7 +33,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>71</LINE>
+        <LINE>76</LINE>
         <COLUMN>6</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -45,19 +45,25 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>72</LINE>
+        <LINE>77</LINE>
         <COLUMN>9</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>73</LINE>
+        <LINE>78</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
+        <FILENAME>postk.cpp</FILENAME>
+        <LINE>79</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>74</LINE>
+        <LINE>80</LINE>
         <COLUMN>7</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -69,19 +75,19 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>75</LINE>
+        <LINE>81</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>76</LINE>
+        <LINE>82</LINE>
         <COLUMN>12</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>76</LINE>
+        <LINE>82</LINE>
         <COLUMN>21</COLUMN>
         <KEYEVENT>
           <ID>4</ID>
@@ -93,13 +99,13 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>77</LINE>
+        <LINE>83</LINE>
         <COLUMN>16</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>76</LINE>
+        <LINE>82</LINE>
         <COLUMN>31</COLUMN>
         <KEYEVENT>
           <ID>5</ID>
@@ -111,7 +117,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>76</LINE>
+        <LINE>82</LINE>
         <COLUMN>21</COLUMN>
         <KEYEVENT>
           <ID>6</ID>
@@ -123,7 +129,7 @@
       <SFA>
         <FILEPATH>c:\cppprimerexcise\c++上机整合\c++上机整合\</FILEPATH>
         <FILENAME>postk.cpp</FILENAME>
-        <LINE>77</LINE>
+        <LINE>83</LINE>
         <COLUMN>16</COLUMN>
         <KEYEVENT>
           <ID>7</ID>

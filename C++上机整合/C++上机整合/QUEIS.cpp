@@ -16,13 +16,13 @@ QUEIS::QUEIS(const QUEIS &q):STACK(q),s(q.s){}
 
 //返回队列的实际元素个数
 QUEIS::operator int() const {
-	return (int)(*this);
+	return (int)(STACK)(*this);
 }
 
 //将e入队列，并返回当前队列
 QUEIS& QUEIS::operator<<(int e) {
-	if ((int)(*this)<(*this).size()) {
-		*this << e;
+	if ((int)(STACK)(*this)<(*this).size()) {
+		(*this).STACK::operator<<(e);
 	}
 	else {
 		cout << "This que is fulled already" << endl;
@@ -32,16 +32,18 @@ QUEIS& QUEIS::operator<<(int e) {
 
 //出队列到e，并返回当前队列
 QUEIS& QUEIS::operator >> (int &e) {
-	if ((int)(*this) > 0) {
+	if ((int)(STACK)(*this) > 0) {
 		int temp = 0;
-		for (int i = 0; i < (int)(*this); i++) {
-			*this >> temp;
+		int s_size = (int)(STACK)(*this);
+		for (int i = 0; i < s_size; i++) {
+			(*this).STACK::operator >> (temp);
 			s << temp;
 		}
 		s >> e;
-		for (int i = 0; i < (int)s; i++) {
+		int stk_size = (int)(STACK)s;
+		for (int i = 0; i < stk_size; i++) {
 			s >> temp;
-			(*this) << temp;
+			(*this).STACK::operator << (temp);
 		}
 	}
 	else {
@@ -52,14 +54,14 @@ QUEIS& QUEIS::operator >> (int &e) {
 
 //赋q给队列并返回该队列
 QUEIS& QUEIS::operator = (const QUEIS &q) {
-	*this = q;
+	(STACK)(*this).STACK::operator=((STACK)q);
 	s = q.s;
 	return *this;
 }
 
 //打印队列
 void QUEIS::print() const {
-	(*this).print();
+	((STACK)(*this)).print();
 }
 
 //销毁队列
