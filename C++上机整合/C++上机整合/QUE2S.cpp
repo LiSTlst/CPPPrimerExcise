@@ -66,8 +66,4 @@ void QUE2S::print()const {
 }
 
 //оЗ╩ы╤сап
-QUE2S::~QUE2S() { 
-	std::cout << "a" <<std::endl;
-	s1.~STACK();
-	s2.~STACK();
-}
+QUE2S::~QUE2S() { }
