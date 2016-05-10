@@ -1,0 +1,6 @@
+﻿  源.cpp
+c:\cppprimerexcise\定义字符串类sting的函数成员\定义字符串类sting的函数成员\源.cpp(106): warning C4930: “STRING str(void)”: 未调用原型函数(是否是有意用变量定义的?)
+c:\cppprimerexcise\定义字符串类sting的函数成员\定义字符串类sting的函数成员\源.cpp(40): warning C4715: “STRING::strlen”: 不是所有的控件路径都返回值
+c:\cppprimerexcise\定义字符串类sting的函数成员\定义字符串类sting的函数成员\源.cpp(58): warning C4715: “STRING::strcmp”: 不是所有的控件路径都返回值
+c:\cppprimerexcise\定义字符串类sting的函数成员\定义字符串类sting的函数成员\源.cpp(69): warning C4172: 返回局部变量或临时变量的地址: new_string
+  定义字符串类STING的函数成员.vcxproj -> C:\CPPPrimerExcise\定义字符串类STING的函数成员\Debug\定义字符串类STING的函数成员.exe
