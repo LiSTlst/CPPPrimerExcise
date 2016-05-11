@@ -42,7 +42,13 @@ int  howMany(const POSTK *const p) {
 
 //取下标x处的栈元素
 int  getelem(const POSTK *const p, int x) {
-	return (p->elems[x - 1]);
+	if (x >= 0 && x < (p->max)) {
+		return (p->elems[x]);
+	}
+	else
+	{
+		cout << "get out of the length of this stack" << endl;
+	}
 }
 
 //将e入栈，并返回p值

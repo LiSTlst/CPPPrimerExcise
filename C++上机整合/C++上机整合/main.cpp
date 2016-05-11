@@ -24,6 +24,7 @@ int main(void) {
 
 	POSTK a, b, c;								//三个函数式栈
 	POSTK* aborc0 = NULL, *aborc = NULL;		//指代三个栈中由用户选择的某一个栈的指针
+	int aflag = 0, bflag = 0, cflag = 0;		//判断栈是否已经被初始化
 	OOSTK *d = NULL, *e = NULL, *f = NULL;		//三个面向对象的栈的指针
 	OOSTK *deorf0 = NULL, *deorf = NULL;		//指代三个栈中由用户选择的某一个栈的指针
 	int dflag = 0, eflag = 0, fflag = 0;		//判断栈是否已经被初始化
@@ -68,12 +69,15 @@ int main(void) {
 							if (cin >> chosed) {
 								if (chosed == 'a') {
 									aborc = &a;
+									aflag = 1;
 								}
 								else if (chosed == 'b') {
 									aborc = &b;
+									bflag = 1;
 								}
 								else if (chosed == 'c') {
 									aborc = &c;
+									cflag = 1;
 								}
 								else {
 									cout << "请按照说明操作，请重新选择操作" << endl;
@@ -102,14 +106,23 @@ int main(void) {
 								<< "请选择要用哪一个栈作为初始化模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc0 = &a;
-									cout << "请选择要初始化的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed0 == 'b') {
-											aborc = &b;
-										}
-										else if (chosed0 == 'c') {
-											aborc = &c;
+									if (aflag) {
+										aborc0 = &a;
+										cout << "请选择要初始化的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'b') {
+												aborc = &b;
+												bflag = 1;
+											}
+											else if (chosed0 == 'c') {
+												aborc = &c;
+												cflag = 1;
+											}
+											else
+											{
+												cout << "请按照说明操作，请重新选择操作" << endl;
+												break;
+											}
 										}
 										else
 										{
@@ -124,14 +137,23 @@ int main(void) {
 									}
 								}
 								else if (chosed == 'b') {
-									aborc0 = &b;
-									cout << "请选择要初始化的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed0 == 'a') {
-											aborc = &b;
-										}
-										else if (chosed0 == 'c') {
-											aborc = &c;
+									if (bflag) {
+										aborc0 = &b;
+										cout << "请选择要初始化的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'a') {
+												aborc = &a;
+												aflag = 1;
+											}
+											else if (chosed0 == 'c') {
+												aborc = &c;
+												cflag = 1;
+											}
+											else
+											{
+												cout << "请按照说明操作，请重新选择操作" << endl;
+												break;
+											}
 										}
 										else
 										{
@@ -146,14 +168,23 @@ int main(void) {
 									}
 								}
 								else if (chosed == 'c') {
-									aborc0 = &c;
-									cout << "请选择要初始化的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed0 == 'a') {
-											aborc = &b;
-										}
-										else if (chosed0 == 'b') {
-											aborc = &c;
+									if (cflag) {
+										aborc0 = &c;
+										cout << "请选择要初始化的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'a') {
+												aborc = &a;
+												aflag = 1;
+											}
+											else if (chosed0 == 'b') {
+												aborc = &b;
+												bflag = 1;
+											}
+											else
+											{
+												cout << "请按照说明操作，请重新选择操作" << endl;
+												break;
+											}
 										}
 										else
 										{
@@ -185,13 +216,35 @@ int main(void) {
 							cout << "请选择要查看的已经初始化了的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag){
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
+
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
@@ -211,13 +264,34 @@ int main(void) {
 							cout << "请选择要查看的已经初始化了的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag) {
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
@@ -237,13 +311,34 @@ int main(void) {
 							cout << "请选择要查看的已经初始化了的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag) {
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
@@ -258,7 +353,7 @@ int main(void) {
 							}
 							cout << "请输入要查看的元素位置" << endl;
 							if (cin >> e_num) {
-								cout << chosed << "栈" << e << "处的元素为" << getelem(aborc, e_num) << endl;
+								cout << chosed << "栈" << e_num << "处的元素为" << getelem(aborc, e_num) << endl;
 							}
 							else
 							{
@@ -271,17 +366,38 @@ int main(void) {
 							cout << "请选择要压入的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag) {
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
-									cout << "请按照说明操作，请重新选择操作" << endl;
+									cout << "请按照说明操作,请重新选择操作" << endl;
 									break;
 								}
 							}
@@ -305,17 +421,38 @@ int main(void) {
 							cout << "请选择要弹出的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag) {
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作，请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
-									cout << "请按照说明操作，请重新选择操作" << endl;
+									cout << "请按照说明操作,请重新选择操作" << endl;
 									break;
 								}
 							}
@@ -333,14 +470,35 @@ int main(void) {
 								<< "请选择要用哪一个栈作为赋值模板" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc0 = &a;
-									cout << "请选择要赋值的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed0 == 'b') {
-											aborc = &b;
-										}
-										else if (chosed0 == 'c') {
-											aborc = &c;
+									if (aflag) {
+										aborc0 = &a;
+										cout << "请选择要赋值的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'b') {
+												if (bflag) {
+													aborc = &b;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else if (chosed0 == 'c') {
+												if (cflag) {
+													aborc = &c;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else
+											{
+												cout << "请按照说明操作，请重新选择操作" << endl;
+												break;
+											}
 										}
 										else
 										{
@@ -350,41 +508,40 @@ int main(void) {
 									}
 									else
 									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
+										cout << "请按照说明操作,请重新选择操作" << endl;
 										break;
 									}
 								}
 								else if (chosed == 'b') {
-									aborc0 = &b;
-									cout << "请选择要赋值的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed == 'a') {
-											aborc = &b;
-										}
-										else if (chosed == 'c') {
-											aborc = &c;
-										}
-										else
-										{
-											cout << "请按照说明操作,请重新选择操作" << endl;
-											break;
-										}
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else if (chosed == 'c') {
-									aborc0 = &c;
-									cout << "请选择要赋值的对象" << endl;
-									if (cin >> chosed0) {
-										if (chosed == 'a') {
-											aborc = &b;
-										}
-										else if (chosed == 'b') {
-											aborc = &c;
+									if (bflag) {
+										aborc0 = &b;
+										cout << "请选择要赋值的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'a') {
+												if (aflag) {
+													aborc = &a;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else if (chosed0 == 'c') {
+												if (cflag) {
+													aborc = &c;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else
+											{
+												cout << "请按照说明操作,请重新选择操作" << endl;
+												break;
+											}
 										}
 										else
 										{
@@ -394,7 +551,50 @@ int main(void) {
 									}
 									else
 									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
+										cout << "请按照说明操作,请重新选择操作" << endl;
+										break;
+									}
+								}
+								else if (chosed == 'c') {
+									if (cflag) {
+										aborc0 = &c;
+										cout << "请选择要赋值的对象" << endl;
+										if (cin >> chosed0) {
+											if (chosed0 == 'a') {
+												if (aflag) {
+													aborc = &a;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else if (chosed0 == 'b') {
+												if (bflag) {
+													aborc = &b;
+												}
+												else
+												{
+													cout << "请按照说明操作,请重新选择操作" << endl;
+													break;
+												}
+											}
+											else
+											{
+												cout << "请按照说明操作，请重新选择操作" << endl;
+												break;
+											}
+										}
+										else
+										{
+											cout << "请按照说明操作，请重新选择操作" << endl;
+											break;
+										}
+									}
+									else
+									{
+										cout << "请按照说明操作,请重新选择操作" << endl;
 										break;
 									}
 								}
@@ -412,13 +612,34 @@ int main(void) {
 							cout << "请选择要打印的栈" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'a') {
-									aborc = &a;
+									if (aflag) {
+										aborc = &a;
+									}
+									else
+									{
+										cout << "请按照说明操作,请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'b') {
-									aborc = &b;
+									if (bflag) {
+										aborc = &b;
+									}
+									else
+									{
+										cout << "请按照说明操作,请重新选择操作" << endl;
+										break;
+									}
 								}
 								else if (chosed == 'c') {
-									aborc = &c;
+									if (cflag) {
+										aborc = &c;
+									}
+									else
+									{
+										cout << "请按照说明操作,请重新选择操作" << endl;
+										break;
+									}
 								}
 								else
 								{
@@ -970,7 +1191,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'd') {
+										if (chosed0 == 'd') {
 											if (dflag) {
 												deorf = d;
 											}
@@ -980,7 +1201,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'f') {
+										else if (chosed0 == 'f') {
 											if (fflag) {
 												deorf = f;
 											}
@@ -1251,7 +1472,7 @@ int main(void) {
 												ghori = h;
 												hflag = 1;
 											}
-											else if (chosed0 == 'f') {
+											else if (chosed0 == 'i') {
 												i = new STACK(*ghori0);
 												ghori = i;
 												iflag = 1;
@@ -1662,7 +1883,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'g') {
+										if (chosed0 == 'g') {
 											if (gflag) {
 												ghori = g;
 											}
@@ -1672,7 +1893,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'i') {
+										else if (chosed0 == 'i') {
 											if (iflag) {
 												ghori = i;
 											}
@@ -1865,10 +2086,10 @@ int main(void) {
 				cout << "----------您已经进入QUE2S程序--------" << '\n'
 					<< "-----------请输入您想要运行的操作---------" << '\n'
 					<< "1：初始化队列           2：使用队列初始化队列" << '\n'
-					<< "3：输出元素个数         4：输出特定位置元素值" << '\n'
-					<< "5：入队列               6：出队列" << '\n'
-					<< "7：用队列赋值           8：打印" << '\n'
-					<< "9：销毁                 0：退出" << endl;
+					<< "3：输出元素个数         4：入队列" << '\n'
+					<< "5：出队列               6：用队列赋值" << '\n'
+					<< "7：打印                 8：销毁" << '\n'
+					<< "0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -1974,7 +2195,7 @@ int main(void) {
 												jkorl = j;
 												jflag = 1;
 											}
-											else if (chosed0 == 'i') {
+											else if (chosed0 == 'l') {
 												l = new QUE2S(*jkorl0);
 												jkorl = l;
 												lflag = 1;
@@ -1997,7 +2218,7 @@ int main(void) {
 										break;
 									}
 								}
-								else if (chosed == 'i') {
+								else if (chosed == 'l') {
 									if (lflag) {
 										jkorl0 = l;
 										cout << "请选择要初始化的对象" << endl;
@@ -2091,61 +2312,6 @@ int main(void) {
 								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
-							cout << "请选择要查看的已经初始化了的栈" << endl;
-							if (cin >> chosed) {
-								if (chosed == 'j') {
-									if (jflag) {
-										jkorl = j;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else if (chosed == 'k') {
-									if (kflag) {
-										jkorl = k;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else if (chosed == 'l') {
-									if (lflag) {
-										jkorl = l;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else
-								{
-									cout << "请按照说明操作,请重新选择操作" << endl;
-									break;
-								}
-							}
-							else
-							{
-								cout << "请按照说明操作，请重新选择操作" << endl;
-								break;
-							}
-							cout << "请输入要查看的元素位置" << endl;
-							if (cin >> e_num) {
-								cout << chosed << "队列" << e_num << "处的元素为" << (*ghori)[e_num] << endl;
-							}
-							else
-							{
-								cout << "请按照说明操作，请重新选择操作" << endl;
-								break;
-							}
-							cout << "请选择接下来要进行的操作" << endl;
-							break;
-						case 5:
 							cout << "请选择要压入的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
@@ -2200,7 +2366,7 @@ int main(void) {
 							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 6:
+						case 5:
 							cout << "请选择要出的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
@@ -2248,7 +2414,7 @@ int main(void) {
 							cout << "操作成功，出" << chosed << "的第一位元素" << e_num << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 7:
+						case 6:
 							cout << "您可以使用j、k、l中已经初始化的队列来给别的队列赋值" << '\n'
 								<< "请选择要用哪一个队列作为赋值模板" << endl;
 							if (cin >> chosed) {
@@ -2306,7 +2472,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'j') {
+										if (chosed0 == 'j') {
 											if (jflag) {
 												jkorl = j;
 											}
@@ -2316,7 +2482,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'l') {
+										else if (chosed0 == 'l') {
 											if (lflag) {
 												jkorl = l;
 											}
@@ -2349,7 +2515,7 @@ int main(void) {
 									}
 									cout << "请选择要赋值的对象" << endl;
 									if (cin >> chosed0) {
-										if (chosed == 'j') {
+										if (chosed0 == 'j') {
 											if (jflag) {
 												jkorl = j;
 											}
@@ -2359,7 +2525,7 @@ int main(void) {
 												break;
 											}
 										}
-										else if (chosed == 'k') {
+										else if (chosed0 == 'k') {
 											if (kflag) {
 												jkorl = k;
 											}
@@ -2391,7 +2557,7 @@ int main(void) {
 							}
 							cout << "请选择接下来要进行的操作" << endl;
 							break;
-						case 8:
+						case 7:
 							cout << "请选择要打印的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
@@ -2439,7 +2605,7 @@ int main(void) {
 							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 9:
+						case 8:
 							cout << "请选择要销毁已经初始化的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'j') {
@@ -2508,11 +2674,11 @@ int main(void) {
 			case 5:
 				cout << "----------您已经进入QUEIS程序--------" << '\n'
 					<< "-----------请输入您想要运行的操作---------" << '\n'
-					<< "1：初始化队列           2：使用队列初始化队列" << '\n'
-					<< "3：输出元素个数         4：输出特定位置元素值" << '\n'
-					<< "5：入队列               6：出队列" << '\n'
-					<< "7：用队列赋值           8：打印" << '\n'
-					<< "9：销毁                 0：退出" << endl;
+					<< "1：初始化队列            2：使用队列初始化队列" << '\n'
+					<< "3：输出元素个数          4：入队列 " << '\n'
+					<< "5：出队列               6：用队列赋值" << '\n'
+					<< "7：打印                 8：销毁" << '\n'
+					<< "0：退出" << endl;
 				flag2 = 1;
 				while (flag2) {
 					if (cin >> stage2) {
@@ -2735,61 +2901,6 @@ int main(void) {
 								<< "请选择接下来要进行的操作" << endl;
 							break;
 						case 4:
-							cout << "请选择要查看的已经初始化了的栈" << endl;
-							if (cin >> chosed) {
-								if (chosed == 'm') {
-									if (mflag) {
-										mnoro = m;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else if (chosed == 'n') {
-									if (nflag) {
-										mnoro = m;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else if (chosed == 'o') {
-									if (oflag) {
-										mnoro = o;
-									}
-									else
-									{
-										cout << "请按照说明操作，请重新选择操作" << endl;
-										break;
-									}
-								}
-								else
-								{
-									cout << "请按照说明操作,请重新选择操作" << endl;
-									break;
-								}
-							}
-							else
-							{
-								cout << "请按照说明操作，请重新选择操作" << endl;
-								break;
-							}
-							cout << "请输入要查看的元素位置" << endl;
-							if (cin >> e_num) {
-								cout << chosed << "队列" << e_num << "处的元素为" << (*mnoro)[e_num] << endl;
-							}
-							else
-							{
-								cout << "请按照说明操作，请重新选择操作" << endl;
-								break;
-							}
-							cout << "请选择接下来要进行的操作" << endl;
-							break;
-						case 5:
 							cout << "请选择要压入的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
@@ -2844,7 +2955,7 @@ int main(void) {
 							cout << "操作成功，将" << e_num << "入队列" << chosed << "中" << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 6:
+						case 5:
 							cout << "请选择要出的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
@@ -2892,7 +3003,7 @@ int main(void) {
 							cout << "操作成功，出" << chosed << "的第一位元素" << e_num << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 7:
+						case 6:
 							cout << "您可以使用m、n、o中已经初始化的队列来给别的队列赋值" << '\n'
 								<< "请选择要用哪一个队列作为赋值模板" << endl;
 							if (cin >> chosed) {
@@ -3035,7 +3146,7 @@ int main(void) {
 							}
 							cout << "请选择接下来要进行的操作" << endl;
 							break;
-						case 8:
+						case 7:
 							cout << "请选择要打印的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
@@ -3083,7 +3194,7 @@ int main(void) {
 							cout << "操作成功，打印出" << chosed << "中所有的元素" << '\n'
 								<< "请选择接下来要进行的操作" << endl;
 							break;
-						case 9:
+						case 8:
 							cout << "请选择要销毁已经初始化的队列" << endl;
 							if (cin >> chosed) {
 								if (chosed == 'm') {
