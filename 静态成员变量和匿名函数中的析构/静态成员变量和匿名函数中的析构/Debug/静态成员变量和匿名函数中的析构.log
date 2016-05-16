@@ -1,3 +1,4 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (静态成员变量和匿名函数中的析构.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   源.cpp
-  静态成员变量和匿名函数中的析构.vcxproj -> C:\CPPPrimerExcise\静态成员变量和匿名函数中的析构\Debug\继承类中的构造顺序.exe
+c:\cppprimerexcise\静态成员变量和匿名函数中的析构\静态成员变量和匿名函数中的析构\源.cpp(85): error C2440: “初始化”: 无法从“const int”转换为“int &”
+  c:\cppprimerexcise\静态成员变量和匿名函数中的析构\静态成员变量和匿名函数中的析构\源.cpp(85): note: 转换丢失限定符

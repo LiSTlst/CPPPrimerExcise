@@ -65,6 +65,7 @@ void main() {
 }
 */
 
+/*
 #include <iostream>
 
 using namespace std;
@@ -76,3 +77,12 @@ public:
 	Complex operator +(Complex);
 	Complex operator <<()
 };
+*/
+
+#include <iostream>
+int main(){
+	const int i = 0;
+	int & j = i;
+	std::cout << j << std::endl;
+	return 0;
+}
