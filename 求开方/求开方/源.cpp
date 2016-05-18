@@ -30,18 +30,13 @@ double improve(double guess, int x) {//进一步逼近真实数值
 	return average(guess, (x / guess));
 }
 
-int try_guess(double guess, int x) {//对数值进行求职
-	int flag = 0;
+double try_guess(double guess, int x) {//对数值进行求职
 	if (good_enough(guess,x)) {
 		return guess;
-		flag = 1;
 	}
 	else
 	{
-		if (!flag) {
-			return guess;
-		}
-		try_guess(improve(guess, x), x);
+		return try_guess(improve(guess, x), x);
 	}
 }
 
@@ -51,7 +46,9 @@ double sqrtx(int x) {//对数值x求开方
 
 
 int main() {
-	int x=9;
+	cout << "请输入您要求开方的数字：";
+	int x=0;
+	cin >> x;
 	cout << x << "的开方是" << sqrtx(x) << endl;
 	return 0;
 }

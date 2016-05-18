@@ -1,5 +1,2 @@
 ﻿  源.cpp
-c:\cppprimerexcise\求开方\求开方\源.cpp(36): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
-c:\cppprimerexcise\求开方\求开方\源.cpp(42): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
-c:\cppprimerexcise\求开方\求开方\源.cpp(46): warning C4715: “try_guess”: 不是所有的控件路径都返回值
   求开方.vcxproj -> C:\CPPPrimerExcise\求开方\Debug\求开方.exe
