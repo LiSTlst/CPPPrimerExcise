@@ -7,43 +7,43 @@
 
 using namespace std;
 
+istream & read_hw(istream& in, vector<double> &hw) {
+	if (in) {
+		hw.clear();
+		double x;
+		while (in >> x) {
+			hw.push_back(x);
+		}
+		in.clear();
+	}
+	return in;
+}
+
+double midian(const vector<double>& hw) {
+	typedef vector<double>::size_type vce_size;
+	vce_size size = hw.size();
+	vce_size mid = size / 2;
+	return (size % 2) ? (hw[mid] + hw[mid + 1]) / 2 : hw[mid];
+}
+
+double grade(double midterm, double final, const vector<double>& hw) {
+	if (hw.size() == 0) {
+		throw(domain_error("Your homeowrk garde is empty~"));
+	}
+	return 0.4*midterm + 0.4*final + 0.2*midian(hw);
+}
+
 int main() {
-	cout << "please enter your first name:";
+	cout << "please enter your name:";
 	string name;
 	cin >> name;
-	cout << "Hello," << name << "!" << endl;
-	cout << "Please enter your midterm and final exam grades:";
+	cout << "hello " << name << " please enter your midterm and final exam grade:";
 	double midterm, final;
 	cin >> midterm >> final;
-
-	cout << "enter all your homework grades,followed by end-of-file:";
+	cout << "please enter all the homework grades:";
 	vector<double> homework;
-	double x;
-	while (cin >> x) {
-		homework.push_back(x);
-	}
-
-	typedef vector<double>::size_type vec_sz;
-	vec_sz size = homework.size();
-	if (size == 0) {
-		cout << endl << "You must enter your grades.Please try again." << endl;
-		return 1;
-	}
-
-	sort(homework.begin(), homework.end());
-
-	vec_sz mid = size / 2;
-	double median;
-	median = size % 2 == 0 ? (homework[mid] + homework[mid + 1]) / 2 : homework[mid];
-
-	streamsize prec = cout.precision();
-	cout << "Your final grade is " << setprecision(3) << 0.2*midterm + 0.4*final + 0.4*median << setprecision(prec) << endl;
+	read_hw(cin, homework);
+	streamsize pre = cin.precision();
+	cout << "Student's grade is " << setprecision(3) << grade(midterm, final, homework) << setprecision(pre) << endl;
 	return 0;
 }
-
-/*
-int main(){
-	vector<student_info> students;
-	student
-}
-*/
