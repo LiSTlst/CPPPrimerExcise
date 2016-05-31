@@ -1,0 +1,4 @@
+<RCC>
+    <qresource prefix="QT_HelloWorld">
+    </qresource>
+</RCC>
